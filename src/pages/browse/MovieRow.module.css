@@ -1,0 +1,37 @@
+.list-title {
+  color: white;
+  font-size: 1.2rem;
+  margin: 20px 0;
+}
+
+.movies-row {
+  display: flex;
+  gap: 0;
+  width: 100%;
+  height: auto;
+  padding: 10px 0;
+  margin: 0 auto;
+
+  /* horizontal scrolling */
+  overflow-x: scroll;
+  overflow-y: visible;
+}
+
+/* Scrollbar color */
+/* For WebKit browsers (Chrome, Safari) */
+::-webkit-scrollbar {
+  height: 9px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #141414;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #3d3c3cc7;
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}

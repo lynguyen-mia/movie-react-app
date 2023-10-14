@@ -1,0 +1,44 @@
+.navbar {
+  width: 100%;
+  height: 68px;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  background-image: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.7) 10%,
+    transparent
+  );
+}
+
+.navbar-black {
+  background-color: #141414;
+  transition-duration: 0.8s;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  /* max-width: 1688px; */
+  width: 95%;
+  margin: 15px auto;
+}
+
+.navbar h1 {
+  color: #e50914;
+  text-shadow: 1px 1px 1px #7c7b7b;
+  letter-spacing: -1px;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.navbar a {
+  text-decoration: none;
+}
+
+.navbar .lookup-ic {
+  width: 30px;
+  height: 30px;
+  text-shadow: 0 2px 8px #7c7b7b;
+  cursor: pointer;
+}

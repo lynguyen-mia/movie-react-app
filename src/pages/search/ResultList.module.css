@@ -1,0 +1,47 @@
+.result-container {
+  margin: 0 auto 400px;
+  padding: 0 50px;
+}
+
+.result-container h2 {
+  color: white;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.result-list {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.result-list img {
+  width: 188px;
+  height: auto;
+  cursor: pointer;
+}
+
+.result-list img:hover,
+.result-list img:focus {
+  border-radius: 5px;
+  transform: scale(1.1);
+  transition: transform 0.2s ease-in;
+  box-shadow: 0 0 2px 2px #0f0000;
+}
+
+.no-sesult {
+  color: white;
+  font-size: 1.2rem;
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 768px) {
+  .search-form {
+    width: 90%;
+  }
+
+  .result-list {
+    gap: 20px;
+  }
+}

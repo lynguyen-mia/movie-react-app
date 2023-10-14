@@ -1,0 +1,46 @@
+/* FOR ORIGINAL MOVIES */
+.img-container__original {
+  flex: 0 0 auto;
+  width: 200px;
+  height: auto;
+
+  /* center image within the container */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.movie-img {
+  width: 93%;
+  height: 93%;
+  border-radius: 4px;
+}
+
+.movie-img:hover,
+.movie-img:focus {
+  border-radius: 5px;
+  transform: scale(1.1);
+  transition: transform 0.2s ease-in;
+  cursor: pointer;
+  box-shadow: 0 0 2px 2px #424242;
+}
+
+/* FOR OTHER MOVIE TYPES */
+.img-container__types {
+  flex: 0 0 auto;
+  width: 300px;
+  height: auto;
+
+  /* center image within the container */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 768px) {
+  .img-container__original,
+  .img-container__types {
+    width: 100%;
+  }
+}
