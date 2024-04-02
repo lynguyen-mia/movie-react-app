@@ -4,7 +4,7 @@ This React application lets users explore a world of movies! It provides a user-
 
 ## Features:
 - Movie Listing: Displays a captivating list of movies based on category from the integrated movie API.
-- Search Functionality: Empowers users to search for movies by genre, type, language and publish year.
+- Search Functionality: Empowers users to search movies by keywords.
 - Movie information card: Provides individual movie card with overview information and trailers.
 
 ## Tech Stack:
