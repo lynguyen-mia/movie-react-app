@@ -76,11 +76,11 @@ const MovieRow = (props) => {
         <Movie
           originalType={props.original}
           movies={movieArr}
-          // onSelectMovie={props.onGetDetails}
           onSelectMovie={onClickMovie}
         />
       </div>
 
+      {/* Movie information card */}
       {seeDetails && (
         <MovieDetail video={movieDetails} seeDetails={setSeeDetails} />
       )}

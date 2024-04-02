@@ -16,8 +16,13 @@ const MovieDetail = (props) => {
   const hasDetails = Object.values(props.video.details) !== 0;
   const hasVideo = filteredResults?.length > 0;
 
+  // Close details
+  function closeDetails() {
+    props.seeDetails((prevState) => !prevState);
+  }
+
   return (
-    <Modal>
+    <Modal isSearch={props.search}>
       <div className={styles["movie-details_box"]}>
         {/* Display movie information */}
         {hasDetails && (
@@ -44,6 +49,7 @@ const MovieDetail = (props) => {
               // className={styles["movie-player"]}
               width="100%"
               height="350"
+              allowFullScreen={true}
               src={`https://www.youtube-nocookie.com/embed/${filteredResults[0]?.key}`}
               style={{ border: "0" }}
             ></iframe>
@@ -63,18 +69,18 @@ const MovieDetail = (props) => {
         {/* Close button */}
         <div className={styles["close-btn"]}>
           <hr className={styles.lines} />
-          <div className={styles.close} onClick={() => props.seeDetails(false)}>
+          <div className={styles.close} onClick={closeDetails}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
-              stroke-width="1.5"
+              strokeWidth="1.5"
               stroke="currentColor"
               className="w-6 h-6"
             >
               <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeLinecap="round"
+                strokeLinejoin="round"
                 d="M4.5 12.75l7.5-7.5 7.5 7.5m-15 6l7.5-7.5 7.5 7.5"
               />
             </svg>

@@ -75,7 +75,14 @@ const ResultList = (props) => {
         {movieList.length === 0 && (
           <p className={styles["no-sesult"]}>No movie found.</p>
         )}
-        {seeDetails && <MovieDetail video={movieDetails} />}
+
+        {seeDetails && (
+          <MovieDetail
+            video={movieDetails}
+            seeDetails={setSeeDetails}
+            search={true}
+          />
+        )}
       </div>
     </div>
   );

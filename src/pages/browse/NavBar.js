@@ -1,15 +1,20 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styles from "./NavBar.module.css";
 import { Link } from "react-router-dom";
 
 const NavBar = () => {
   const [colorChange, setColorChange] = useState(false);
 
-  // Change navbar background color
-  window.addEventListener("scroll", () => {
-    if (window.scrollY > 100) setColorChange(true);
-    else setColorChange(false);
-  });
+  useEffect(() => {
+    // Change navbar background color
+    const colorChange = () => {
+      if (window.scrollY > 100) setColorChange(true);
+      else setColorChange(false);
+    };
+    window.addEventListener("scroll", colorChange);
+
+    return () => window.removeEventListener("scroll", colorChange);
+  }, []);
 
   return (
     <div
