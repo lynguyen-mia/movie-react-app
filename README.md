@@ -12,4 +12,4 @@ This React application lets users explore a world of movies! It provides a user-
 - CSS: CSS modules
 - Data Fetching: Fetch API.
 - State Management: useState, React context.
-- Third-Party API: Integration with [The Movie Database API] (https://developer.themoviedb.org/docs/getting-started) for movie data access
+- Third-Party API: Integration with [The Movie Database API](https://developer.themoviedb.org/docs/getting-started) for movie data access
