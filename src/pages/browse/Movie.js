@@ -6,7 +6,7 @@ import defaultPoster from "../../images/default-poster.jpeg";
 const Movie = (props) => {
   return (
     <React.Fragment>
-      {props.movies.map((movie, index) =>
+      {props.movies?.map((movie, index) =>
         // prettier-ignore
         <div  onClick={(e) => props.onSelectMovie(e, movie.id, movie)}
               key={index}

@@ -24,7 +24,7 @@ const ResultList = (props) => {
 
     window.scrollTo({
       top: offsetPosition,
-      behavior: "smooth"
+      behavior: "smooth",
     });
 
     // Check element id
@@ -40,7 +40,7 @@ const ResultList = (props) => {
       const movieDetails = movieList.find((obj) => obj.id === id);
       // Fetch videos of clicked movie
       const videoConfig = {
-        url: `https://api.themoviedb.org/3/movie/${id}/videos?api_key=${ctx.API_KEY}`
+        url: `https://api.themoviedb.org/3/movie/${id}/videos?api_key=${ctx.API_KEY}`,
       };
       const videoHandleFn = (data) => {
         // Store movie video data
@@ -59,7 +59,7 @@ const ResultList = (props) => {
     <div className={styles["result-container"]}>
       <h2>Search Result</h2>
       <div className={styles["result-list"]}>
-        {movieList.map((movie, index) => (
+        {movieList?.map((movie, index) => (
           <img
             key={index}
             src={
@@ -72,7 +72,7 @@ const ResultList = (props) => {
           />
         ))}
 
-        {movieList.length === 0 && (
+        {movieList?.length === 0 && (
           <p className={styles["no-sesult"]}>No movie found.</p>
         )}
 
