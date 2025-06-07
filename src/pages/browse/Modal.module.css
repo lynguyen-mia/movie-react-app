@@ -16,6 +16,7 @@
   height: 400px;
   background-color: #141414;
   position: relative;
+  overflow-y: auto;
 }
 
 /* MEDIA QUERIES */
